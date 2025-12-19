@@ -17,5 +17,5 @@ Start container with "docker start {container_id}"<br>
 Stop container with "docker stop {container_id}"<br>
 Remove container with "docker rm {container_id}"
 
-Docker Desktop will be required for Windows
+Docker Desktop will be required for Windows<br>
 Commands may need to be prefixed with "sudo " on Linux machines
