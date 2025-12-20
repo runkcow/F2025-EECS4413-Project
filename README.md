@@ -19,3 +19,15 @@ Remove container with "docker rm {container_id}"
 
 Docker Desktop will be required for Windows<br>
 Commands may need to be prefixed with "sudo " on Linux machines
+
+The application can be run locally with docker using the commands stated above.
+However, to run it locally without using docker, run "node server.js" while the current directory is "root/backend"
+
+To run the website in development, respective code lines in server.js needs to be removed and api urls of frontend needs to be 
+changed to reflect the localhost port of backend. Then the backend and frontend can be run separately, "npm run dev" for the frontend.
+
+To run this project on an EC2 instance (ubuntu), create a docker image on the home computer and copy the file onto the ubuntu.
+First, create a .tar file of the docker image using "docker save -o myimage.tar myimage:latest".
+Then copy the .tar file to the EC2 instance using "scp -i your-key.pem localfile.txt ec2-user@EC2_PUBLIC_IP:/home/ec2-user/"
+Connect to the EC2 instance and load the .tar file using "docker load -i myimage.tar".
+The loaded docker can now be run using previously stated commands on the EC2 instance. 
