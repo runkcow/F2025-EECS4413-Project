@@ -31,3 +31,6 @@ First, create a .tar file of the docker image using "docker save -o myimage.tar 
 Then copy the .tar file to the EC2 instance using "scp -i your-key.pem localfile.txt ec2-user@EC2_PUBLIC_IP:/home/ec2-user/"
 Connect to the EC2 instance and load the .tar file using "docker load -i myimage.tar".
 The loaded docker can now be run using previously stated commands on the EC2 instance. 
+
+![Example Image](ExampleFrontend.png)
+Example picture of what the website looks like.
